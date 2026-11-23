@@ -8,6 +8,7 @@ const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');
 
 
+
 const _URL = "https://private-flagsss.ellie-woodward-2024.workers.dev/";
 
 
@@ -108,6 +109,10 @@ flagChecker.addEventListener("keydown", function (event) {
     }
 });
 
+function toggleOn2(element, event) {
+    event.stopPropagation();
+    element.classList.toggle('active');
+}
 
 
 
