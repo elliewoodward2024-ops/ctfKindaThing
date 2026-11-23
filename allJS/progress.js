@@ -26,6 +26,7 @@ function completeFlag(flagID) {
 
     updateProgress();
     updateHomeProgress();
+    CryptUnlocker();
 }
 
 function isFlagFound(flagID) {
@@ -40,6 +41,10 @@ function resetProgress() {
         checkbox.checked = false;
         checkbox.dispatchEvent(new Event("change", { bubbles: true }));
     });
+
+    updateProgress();
+    updateHomeProgress();
+    CryptUnlocker();
 
 }
 
@@ -131,6 +136,7 @@ function updateHomeProgress() {
 document.addEventListener("DOMContentLoaded", () => {
     updateProgress();
     updateHomeProgress();
+    CryptUnlocker();
 
     const resetButton = document.querySelector("#reset-progress");
 
@@ -143,3 +149,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+function CryptUnlocker() {
+    const foundFlags = getFoundFlags();
+
+    document.querySelectorAll("[unlock]").forEach(challenge => {
+        const challengeNumber = Number(challenge.getAttribute("unlock"));
+
+        if (challengeNumber == 1) {
+            challenge.classList.add("unlocked");
+            return;
+        }
+
+        const previousChal = `crypt_flag-${challengeNumber - 1}`;
+
+        if (foundFlags.includes(previousChal)){
+            challenge.classList.add("unlocked");
+            return;
+        } else {
+            challenge.classList.remove("unlocked");
+            return; 
+        }
+
+    });
+
+}
+
