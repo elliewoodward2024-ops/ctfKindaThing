@@ -162,7 +162,8 @@ header {
 
 
 
-.tester {
+.tester[unlocked] {
+    display:none;
     flex-direction: column;
     align-items: center;
     background-color: rgb(0, 0, 0);
@@ -175,6 +176,23 @@ header {
     min-width: 400px;
     min-height: 100px;
 
+}
+
+.tester[unlocked].unlocked {
+    display: block;
+    animation: challengeAppear 0.8s ease both;
+}
+
+@keyframes challengeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tester .close-btn {

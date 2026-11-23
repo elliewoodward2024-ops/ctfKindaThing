@@ -27,6 +27,8 @@ function completeFlag(flagID) {
     updateProgress();
     updateHomeProgress();
     CryptUnlocker();
+    WebUnlocker();
+    StegoUnlocker();
 }
 
 function isFlagFound(flagID) {
@@ -45,6 +47,8 @@ function resetProgress() {
     updateProgress();
     updateHomeProgress();
     CryptUnlocker();
+    WebUnlocker();
+    StegoUnlocker();
 
 }
 
@@ -137,6 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateProgress();
     updateHomeProgress();
     CryptUnlocker();
+    WebUnlocker();
+    StegoUnlocker();
 
     const resetButton = document.querySelector("#reset-progress");
 
@@ -163,6 +169,56 @@ function CryptUnlocker() {
         }
 
         const previousChal = `crypt_flag-${challengeNumber - 1}`;
+
+        if (foundFlags.includes(previousChal)){
+            challenge.classList.add("unlocked");
+            return;
+        } else {
+            challenge.classList.remove("unlocked");
+            return; 
+        }
+
+    });
+
+}
+
+function WebUnlocker() {
+    const foundFlags = getFoundFlags();
+
+    document.querySelectorAll("[unlocker]").forEach(challenge => {
+        const challengeNumber = Number(challenge.getAttribute("unlocker"));
+
+        if (challengeNumber == 1) {
+            challenge.classList.add("unlocked");
+            return;
+        }
+
+        const previousChal = `web_flag-${challengeNumber - 1}`;
+
+        if (foundFlags.includes(previousChal)){
+            challenge.classList.add("unlocked");
+            return;
+        } else {
+            challenge.classList.remove("unlocked");
+            return; 
+        }
+
+    });
+
+}
+
+function StegoUnlocker() {
+    const foundFlags = getFoundFlags();
+
+    document.querySelectorAll("[unlocked]").forEach(challenge => {
+        const challengeNumber = Number(challenge.getAttribute("unlocked"));
+
+        if (challengeNumber == 1) {
+            challenge.classList.add("unlocked");
+            return;
+        }
+
+        const previousChal = `stego_flag-${challengeNumber - 1}`;
 
         if (foundFlags.includes(previousChal)){
             challenge.classList.add("unlocked");
