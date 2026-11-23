@@ -1,163 +1,126 @@
-<code>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-
-<head> 
-<title>Home</title>
+<head>
 <link rel="stylesheet" href="styles/style.css">
-<script src="allJS/home.js" defer ></script>
-<script src="allJS/webchal.js" defer></script> 
-<script src="allJS/progress.js" defer></script>
-
 <meta name="view-transition" content="same-origin">
-
 </head>
 
-<header>
-<div class = "typewriter-container">
-<h1 style="padding-top: 10px;" class="typewriter-text">./CTF_STYLE_CHALLENGES</h1>
-</div><br><br>
-<button id="menu-btn" class="menu-btn">&#9776; Open Menu</button>
-<br><br>
-<nav id="sidebar" class="sidebar">
-<div class="sidebar-links">
-<a href="javascript:void(0)" class="closebtn" id="close-btn">&times;</a>
-<a href="index.html">cd Home</a>
-<a href="crypChal.html"> cd Crypto_Challenges</a>
-<a href="webChal.html"> cd Web_Challenges</a>
-<a href="picChal.html"> cd Stego_Challenges</a>
-<a href="answers.html">cd Answers</a>
-</div>
-
-</header>
 
 
 
-<body>
-<div class="dashboard">
-<div class="terminal-container objective-container">
 
-    <div class="terminal-header">
-            $ cat ./OBJECTIVE
-    </div>
+<body >
+    <div class = "typewriter-container">
+<h1 style="padding-top: 10px;">./NETWORK_ACCESS</h1>
 
-        <div class="terminal-content">
-            <p>You have one main objective.<br><br>FIND FLAGS.<br><br>Think Carefully, Read Everything. 
-            </p>
-    </div>
-
-
-</div>
-
-<div class="terminal-container challenge-container">
-
-    <div class="terminal-header">
-            $ ls ./ENTER_CHALLENGES
-    </div>
-
-        <div class="challenge-grid">
-            <a href="webChal.html" class="challenge-card web-card">
-                <div class="challenge-title">WEB</div><br>
-                <div class="chal-info">07 Challenges</div><br><br>
-                <div class="enter-button">Enter</div>
-                </a>
-            <a href="crypChal.html" class="challenge-card crypto-card">
-                <div class="challenge-title">CRYPTO</div><br>
-                <div class="chal-info">09 Challenges</div><br><br>
-                <div class="enter-button">Enter</div>
-                </a>
-            <a href="picChal.html" class="challenge-card stego-card">
-                <div class="challenge-title">STEGO</div><br>
-                <div class="chal-info">06 Challenges</div><br><br>
-                <div class="enter-button">Enter</div>
-                </a>
-        </div>
-
-</div>
-<div class="terminal-container progress-container">
-
-    <div class="terminal-header">
-            $ cat ./PROGRESS
-    </div>
-
-<div class="challenge-grid2">
-        <a href="webChal.html" class="challenge-card">
-            <div class="challenge-title">WEB</div>
-            <div class="challenge-info">
-                07 Challenges
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill web-progress"></div>
-            </div>
-            <div class="web-progress-text" id="web-progress-text">
-                0 / 7
-            </div>
-        </a>
-        <a href="crypChal.html" class="challenge-card">
-            <div class="challenge-title">CRYPTO</div>
-            <div class="challenge-info">
-                09 Challenges
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill crypto-progress"></div>
-            </div>
-            <div class="crypto-progress-text" id="crypto-progress-text">
-                0 / 9
-            </div>
-        </a>
-
-        <a href="picChal.html" class="challenge-card">
-            <div class="challenge-title">STEGO</div>
-            <div class="challenge-info">
-                06 Challenges
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill stego-progress"></div>
-            </div>
-            <div class="stego-progress-text" id="setgo-progress-text">
-                0 / 6
-            </div>
-        </a>
-        </div>
-
-
-</div>
-</div>
-<div class="tester3" onclick="toggleOn2(this, event)">
-        <span class="Preview" style="font-size: 20px;">$ ./about (Click to open)</span>       
-    <p class="inner2">
-    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-    _ _ _ _ _ _ _ _ _ _ _  <br><br><br>
-    Welcome to a little CTF Challenge Page!<br><br>
-    The idea of this page was to create a selection 
-    of easy to hard challenges that cover a range of different
-    cryptography ciphers as well as web exploration challenges.
-<br><br>
-    On this page all resources needed to solve the cryptography 
-    challenges are provided in the tools section on the challenge page.
-    (Though I do encourage writing your own scripts or hand solving the problem
-    where you are able too.)
-    However to complete the web exploration style challenges you 
-    will need to be able to use the inspect tool on your computer. 
-<br><br><br>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-    _ _ _ _ _ _ _ _ _ _ _  
+<p>
+        [OK] Establishing connection<br>
+        [OK] Encryption protocol initialised<br>
+        [OK] Network response received<br>
+        [!!] User clearance: UNVERIFIED<br>
+        [!!] Restricted directories: LOCKED<br>
+        [!!] Experience: ZERO<br>
+        [!!] Files Found: NONE<br>
 </p>
-<br>
+
+
+
+<h1 style="padding-top: 10px;">YOU HAVE FOUND THIS NETWORK</h1>
+<p>
+You have found this network. This means you are now tasked with a mission.<br>
+Within this network lies the hidden paths. These paths are only able to be solved by those<br>
+willing to look beyond the obvious, finding the little details.<br>
+Your mission is to recover 5 missing files. These files will be hidden and can be<br>
+recovered through completing the challenges. Once all challenges are compleat and the 5<br>
+missing files recovered there will be a final challenge to get the what is known as NODE_01.<br>
+</p>
+
+<h1>$ cat ./MISSION_BRIEF</h1>
+
+<p>
+    Your objective is simple:<br><br>
+    
+    - Complete challenges and recover flags.<br><br>
+    - Develop your technical skills.<br><br>
+    - Earn experience and increase your clearance.<br><br>
+    - Unlock restricted directories and new environments.<br><br>
+    - Investigate anything that doesn't belong.<br><br>
+
+    Your progress is recorded. Your access is earned.
+</p>
+
+<h1 style="padding-top: 10px;" class="typewriter-text2">$ ./GAIN_ACCESS</h1>
+<p>
+    We are waiting...
+</p><br>
+<a href="main.html" class="welp">ENTER THE NETWORK</a>
 </div>
-
-
-
-<br><br><br><br>
-
-<h2 class="DANGER">DANGER ZONE</h2>
-<h class="DANGER-description">&emsp;To reset ALL progress for ALL flag findings, click reset button (you may need
-    to reload page for reset to take full effect):</h>
-<button id="reset-progress" class="reset-progress-btn">Reset Progress</button>
-
-
+</body>
 
 </html>
-</code>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".typewriter-container");
+    if (!container) return;
+    
+    const walker = document.createTreeWalker(
+        container,
+        NodeFilter.SHOW_TEXT
+    );
+    const textNodes = [];
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const text = node.textContent.trim();
+        if (text.length > 0) {
+            textNodes.push({
+                node: node,
+                text: text
+            });
+        }
+    }
+    
+    textNodes.forEach(item => {
+        item.node.textContent = "";
+    });
+    
+    const cursor = document.createElement("span");
+    cursor.className = "terminal-cursor";
+    let nodeIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 35;
+    const linePause = 100;
+    function typeNextCharacter() {
+        
+        if (nodeIndex >= textNodes.length) {
+            cursor.remove();
+            return;
+        }
+        const current = textNodes[nodeIndex];
+        const node = current.node;
+        const originalText = current.text;
+        
+        const parent = node.parentElement.closest("h1, p, a");
+        if (parent) {
+            parent.style.visibility = "visible";
+        }
+        
+        cursor.remove();
+        node.parentNode.insertBefore(cursor, node.nextSibling);
+        if (charIndex < originalText.length) {
+            
+            node.textContent += originalText[charIndex];
+            charIndex++;
+            setTimeout(typeNextCharacter, typingSpeed);
+        } else {
+            
+            cursor.remove();
+            nodeIndex++;
+            charIndex = 0
+            setTimeout(typeNextCharacter, linePause);
+        }
+    }
+    typeNextCharacter();
+
+});
+</script>

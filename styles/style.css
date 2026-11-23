@@ -472,3 +472,51 @@ p {
     opacity: 1;
     padding: 20px;
 }
+.welp {
+    display: inline-block;
+    
+    padding: 12px 20px;
+    margin-top: 10px;
+
+    background-color: transparent;
+    color: #39ff14;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    transition: all 0.25s ease;
+}
+
+.welp:hover {
+    background-color: #39ff14;
+    color: black;
+    box-shadow: 0 0 12px #39ff14;
+    cursor: pointer;
+}
+
+.welp:active {
+    transform: scale(0.97);
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #40ff00;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.type-line {
+    display: block;
+    visibility: hidden;
+    white-space: pre-wrap;
+}
+
+.type-line.typing {
+    visibility: visible;
+}
+
