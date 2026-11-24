@@ -3,6 +3,8 @@ const MainOutput = document.getElementById("terminal-output");
 const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
 
+import { getPath } from "../fileSystem/paths.js";
+
 
 import {
     addToHistory,
