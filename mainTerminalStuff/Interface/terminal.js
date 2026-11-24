@@ -1,8 +1,16 @@
 
 const MainOutput = document.getElementById("terminal-output");
-const ErrorOutput = document.getElementById("terminal-output-error");
 const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
+
+
+import {
+    addToHistory,
+    getPreviousCommand,
+    getNextCommand
+} from "../workingParts/history.js";
+
+// const possibleCommands = ["ls", "cat", "cp", "file", "head"];
 
 console.log(terminalContainer);
 
@@ -25,19 +33,45 @@ function creatingInputLineThing() {
     lineThing.appendChild(inputStuff);
 
     terminalContainer.appendChild(lineThing);
+    terminalContainer.scrollTop = terminalContainer.scrollHeight;
     inputStuff.focus();
 
 
     inputStuff.addEventListener("keydown", function(event) {
+        
         if (event.key === "Enter") {
-            event.preventDefault();
-            inputStuff.disabled = true;
-            const givenCommand = inputStuff.value.trim();
-            console.log(givenCommand);
-            creatingInputLineThing();
+                event.preventDefault();
+                inputStuff.disabled = true;
+                const givenCommand = inputStuff.value.trim();
+                console.log(givenCommand);
+                creatingInputLineThing();
+
+                if (givenCommand != ""){
+                addToHistory(givenCommand);
+                }
+                
         }
+
+        if (event.key === "ArrowUp") {
+            event.preventDefault();
+            inputStuff.value = getPreviousCommand();
+
+        }
+
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            inputStuff.value = getNextCommand();
+        }
+
     });
 
-}
+    
 
+}
 creatingInputLineThing();
+
+
+
+
+
+
