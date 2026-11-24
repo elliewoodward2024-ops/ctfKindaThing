@@ -4,6 +4,14 @@ const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
 
 import { getPath } from "../fileSystem/paths.js";
+import { listDir, readFile, getThingInfo } from "../fileSystem/virtual.js";
+import { RootDirectory } from "../fileSystem/directories.js";
+
+
+console.log(getThingInfo("/home/visitor/README.txt"));
+console.log(getThingInfo("/home"));
+console.log(getThingInfo("/fake/path"));
+console.log(getThingInfo("/"));
 
 
 import {
@@ -46,12 +54,11 @@ function creatingInputLineThing() {
                 inputStuff.disabled = true;
                 const givenCommand = inputStuff.value.trim();
                 console.log(givenCommand);
-                creatingInputLineThing();
-
+                
                 if (givenCommand != ""){
                 addToHistory(givenCommand);
                 }
-                
+                creatingInputLineThing();     
         }
 
         if (event.key === "ArrowUp") {

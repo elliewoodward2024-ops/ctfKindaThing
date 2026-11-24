@@ -1,5 +1,6 @@
 import { RootDirectory } from "./directories.js";
 
+
 export function getPath(path){
     const pathParts = path.split("/").filter(Boolean);
 

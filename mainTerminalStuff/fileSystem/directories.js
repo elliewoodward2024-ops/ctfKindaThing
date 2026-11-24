@@ -1,4 +1,4 @@
-import { metadata } from "./metadata.js";
+import { makingMetadataCusWeCoolLikeThat } from "./metadata.js";
 
 
 export const RootDirectory = {
@@ -31,20 +31,13 @@ RootDirectory.children["home"].children["visitor"].children["Downloads"] = {
     children:{}
 };
 
+const readme = "Welcome to the in built terminal. If you want to know the commands you have access to then type --help into the terminal.";
 RootDirectory.children["home"].children["visitor"].children["README.txt"] = {
     name: "README.txt",
     type: "file",
-    contents:"Welcome to the in built terminal. If you want to know the commands you have access to then type --help into the terminal.", 
+    contents: readme, 
 
-    metadata: {
-    size: 0,
-    type: "text/plain",
-    permissions: 644,
-    owner: "Ellie",
-    group: "visitor",
-    created: 2026-11-24, 
-    modified: 2026-11-24
-    }
+    metadata: makingMetadataCusWeCoolLikeThat(readme)
 };
 
 
@@ -90,20 +83,13 @@ RootDirectory.children["var"].children["log"] = {
     children:{}
 };
 
+const system_notes = "";
 RootDirectory.children["var"].children["log"].children["system_notes.txt"] = {
     name: "system_notes.txt",
     type: "file",
-    contents: "",
+    contents: system_notes,
 
-    metadata: {
-    size: 0,
-    type: "text/plain",
-    permissions: 644,
-    owner: "Ellie",
-    group: "visitor",
-    created: 2026-11-24, 
-    modified: 2026-11-24
-    }
+    metadata: makingMetadataCusWeCoolLikeThat(system_notes)
 };
 
 
