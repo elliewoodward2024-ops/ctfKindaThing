@@ -58,7 +58,7 @@ missing files recovered there will be a final challenge to get the what is known
 </body>
 
 </html>
-
+<!-- Wondering why this is here and not in a js file like the rest of them... well I don't know either bro  -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".typewriter-container");
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor.className = "terminal-cursor";
     let nodeIndex = 0;
     let charIndex = 0;
-    const typingSpeed = 35;
-    const linePause = 100;
+    const typingSpeed = 10;
+    const linePause = 50;
     function typeNextCharacter() {
         
         if (nodeIndex >= textNodes.length) {

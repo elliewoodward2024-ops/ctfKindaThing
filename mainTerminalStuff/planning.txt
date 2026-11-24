@@ -1,0 +1,71 @@
+OK so commands that I wanna have in the simulated terminal thing
+
+Category	        Commands
+
+Navigation	        ls, cd, pwd, tree - done
+
+File reading	    cat, less, head, tail - done
+
+File management	    cp, mv, rm, mkdir, touch - done
+
+Searching	        grep, find, which, whereis - done
+
+Information	        whoami, uname, date, id - done
+
+Text	            echo, printf, wc, sort, uniq - done
+
+Networking	        wget, curl - done
+
+Permissions	        chmod, stat, file
+
+Utilities	        clear, history, help, man. - done
+
+
+
+
+File SetUp
+
+
+
+
+main/
+
+    index.js
+
+    workingPart/
+        parser
+        executor
+        history
+        pipeline
+
+    commands/
+        navigation/
+            ls, cd, pwd, tree
+
+        files/
+            cp, mv, rm, mkdir, touch, cat, less, head, tail
+
+        search/
+            grep, find, which, whereis
+
+        network/
+            wget, curl
+
+        system/
+            whoami, uname, date, id, clear, history, help, man
+
+        permissions/
+            chmod, stat, file 
+
+        other?/
+            echo, printf, wc, sort, uniq
+
+    FileSystem/
+        virtual
+        directories
+        permissions
+
+
+
+
+    
