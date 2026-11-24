@@ -6,27 +6,19 @@
 <head>
 <title>Terminal</title>
 <link rel="stylesheet" href="terminal.css">
-<script src="terminal.js"></script>
-<script src="themes.js" defer></script>
+<script src="terminal.js" defer></script>
 </head>
 
+<body>
 
-
-
-<div class="terminalContainer" data-theme="main">
-
-    <div class="terminal-header">
+<div class="terminal-header">
         <span>THE NETWORK TERMINAL</span><br>
-        <span class="terminal-status">STATUS: ONLINE</span><br><br>
+        <span class="terminal-status">STATUS: ONLINE</span><br>
     </div>
 
+<div class="terminalContainer" id="terminalContainer" theme="main">
     <div class="terminal-output" id="terminal-output"></div>
-
-    <div class="terminal-input-line">
-        <span class="terminal-prompt">visitor@TheNetwork:~$</span>
-        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" spellcheck="false"/>
-    </div>
-
+    <div class="terminal-output-error" id="terminal-output-error"></div>
 </div>
 
 </body>

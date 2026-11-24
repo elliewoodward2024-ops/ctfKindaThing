@@ -16,6 +16,12 @@
     color: var(--textColour);
     font-size: 30px;
     text-shadow: 0 0 20px var(--textColour);
+    color: var(--textColour);
+    font-family: monospace;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
 
 }
 
@@ -26,7 +32,7 @@
     border: #1d1d1d;
     transition: all 0.3ms ease;
     min-width: 1100px;
-    padding: 10px 10px;
+    padding: 5px 10px;
     border: 0px solid var(--textColour);
 }
 
@@ -36,10 +42,18 @@
     color: var(--textColour);
     border: #1d1d1d;
     transition: all 0.3ms ease;
-    padding: 10px 10px;
+    padding: 5px 10px;
     border-color: var(--textColour);
     outline: none;
     border: 0px solid var(--textColour);
+}
+
+.terminal-output-error {
+    color: #ff0000;
+}
+
+.terminal-output {
+    color: var(--textColour);
 }
 
 .terminal-status {
@@ -54,6 +68,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
+    width: 1300px;
+    height: 650px;
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--textColour) #131313;
 }
 
 body {
