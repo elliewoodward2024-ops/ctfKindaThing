@@ -1,0 +1,62 @@
+:root {
+        --textColour: #39ff14;
+    }
+    [theme="crypto"] {
+        --textColour: #ff0099;
+    }
+    [theme="web"] {
+        --textColour: #00eaff; 
+    }
+    [theme="stego"] {
+        --textColour: #ff5100;
+    }
+
+
+.terminal-header {
+    color: var(--textColour);
+    font-size: 30px;
+    text-shadow: 0 0 20px var(--textColour);
+
+}
+
+.terminal-input {
+    background-color: #000000;
+    font-family: monospace;
+    color: var(--textColour);
+    border: #1d1d1d;
+    transition: all 0.3ms ease;
+    min-width: 1100px;
+    padding: 10px 10px;
+    border: 0px solid var(--textColour);
+}
+
+.terminal-input:focus {
+    background-color: #000000;
+    font-family: monospace;
+    color: var(--textColour);
+    border: #1d1d1d;
+    transition: all 0.3ms ease;
+    padding: 10px 10px;
+    border-color: var(--textColour);
+    outline: none;
+    border: 0px solid var(--textColour);
+}
+
+.terminal-status {
+    color: var(--textColour);
+    font-size: 15px;
+}
+
+.terminalContainer{
+    color: var(--textColour);
+    font-family: monospace;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+body {
+    background-color: black;
+    font-size: 13px;
+}
