@@ -8,25 +8,25 @@ export const RootDirectory = {
 };
 
 RootDirectory.children["home"] = {
-    name: "/home",
+    name: "home",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["home"].children["visitor"] = {
-    name: "/home/visitor",
+    name: "visitor",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["home"].children["visitor"].children["Documents"] = {
-    name: "/home/visitor/Documents",
+    name: "Documents",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["home"].children["visitor"].children["Downloads"] = {
-    name: "/home/visitor/Downloads",
+    name: "Downloads",
     type: "directory",
     children:{}
 };
@@ -42,43 +42,43 @@ RootDirectory.children["home"].children["visitor"].children["README.txt"] = {
 
 
 RootDirectory.children["tmp"] = {
-    name: "/tmp",
+    name: "tmp",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["usr"] = {
-    name: "/usr",
+    name: "usr",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["usr"].children["bin"] = {
-    name: "/usr/bin",
+    name: "bin",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["usr"].children["share"] = {
-    name: "/usr/share",
+    name: "share",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["root"] = {
-    name: "/root",
+    name: "root",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["var"] = {
-    name: "/var",
+    name: "var",
     type: "directory",
     children:{}
 };
 
 RootDirectory.children["var"].children["log"] = {
-    name: "/var/log",
+    name: "log",
     type: "directory",
     children:{}
 };

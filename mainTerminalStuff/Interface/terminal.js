@@ -4,14 +4,20 @@ const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
 
 import { getPath } from "../fileSystem/paths.js";
-import { listDir, readFile, getThingInfo } from "../fileSystem/virtual.js";
+import { listDir, readFile, getThingInfo, createFile, createDir, DeleteFile, DeleteDir } from "../fileSystem/virtual.js";
 import { RootDirectory } from "../fileSystem/directories.js";
 
+console.log(createFile("/home/visitor/heheh.txt", "hello"));
+console.log(DeleteFile("/home/visitor/heheh.txt"));
 
-console.log(getThingInfo("/home/visitor/README.txt"));
-console.log(getThingInfo("/home"));
-console.log(getThingInfo("/fake/path"));
-console.log(getThingInfo("/"));
+console.log(createDir("/home/visitor/Program"));
+console.log(DeleteDir("/home/visitor/Program"));
+
+console.log(createDir("/home/visitor/Program"));
+
+console.log(createFile("/home/visitor/Program/heheh.txt", "hello"));
+console.log(DeleteDir("/home/visitor/Program"));
+
 
 
 import {
@@ -78,9 +84,3 @@ function creatingInputLineThing() {
 
 }
 creatingInputLineThing();
-
-
-
-
-
-
