@@ -42,6 +42,41 @@
 
 
 
+.topbar {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 15px;
+    background-color: black;
+    border-bottom: 1px solid #a600ff;
+    z-index: 1;
+}
+
+.pointContainerThing{
+    padding: 0;
+}
+
+.menu-btn {
+    padding: 7px 7px;    
+    background-color: #000000;
+    font-family: monospace;
+    color: #a600ff;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-size: large;
+    font-size: 15px;
+}
+
 
 body {
     background-color: black;
@@ -67,21 +102,9 @@ header {
     overflow: hidden;
 }
 
-.menu-btn {
-    background-color: #000000;
-    font-family: monospace;
-    color: #a600ff;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    font-size: large;
-
-}
-
 .menu-btn:hover {
     background-color: #1a1d23;
+    /* background-color: rgba(71, 0, 110, 0.5); */
 }
 
 .sidebar {

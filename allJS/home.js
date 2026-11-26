@@ -1,4 +1,6 @@
 const flagChecker = document.querySelector("#flag")
+
+
 const outputThing = document.querySelector("#msg")
 const foundFlags = new Set();
 

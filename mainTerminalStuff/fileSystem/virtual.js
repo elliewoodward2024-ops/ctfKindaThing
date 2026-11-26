@@ -176,3 +176,50 @@ export function DeleteDir(path) {
 
     
 }
+
+export function CopyFile(sourcePath, destinationPath){
+
+    const pathParts = destinationPath.split("/");
+    const fileName = pathParts.pop();
+    const parentPath = pathParts.join("/") || "/";
+    const sourceFileStuff = getPath(sourcePath);
+
+    const parentDirectory = getPath(parentPath);
+
+    if (sourceFileStuff === null){
+        return null;
+    }
+
+    if (sourceFileStuff.type !== "file") {
+        return null;
+    }
+
+    if (parentDirectory === null){
+        return null;
+    }
+
+    if (parentDirectory.type !== "directory") {
+        return null;
+    }
+
+
+    const content = sourceFileStuff.contents;
+
+    const FileCopy = {
+        name: fileName,
+        type: "file",
+        contents: content,
+        metadata: makingMetadataCusWeCoolLikeThat(content)
+    };
+
+    if (parentDirectory.children[fileName] === "") {
+        return null
+    } else if (parentDirectory.children[fileName] === undefined){
+        parentDirectory.children[fileName] = FileCopy;
+        return FileCopy;
+    } else {
+        return null
+    }
+    
+
+}

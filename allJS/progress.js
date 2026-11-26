@@ -29,6 +29,7 @@ function completeFlag(flagID) {
     CryptUnlocker();
     WebUnlocker();
     StegoUnlocker();
+    pointtracker();
 }
 
 function isFlagFound(flagID) {
@@ -49,6 +50,7 @@ function resetProgress() {
     CryptUnlocker();
     WebUnlocker();
     StegoUnlocker();
+    pointtracker();
 
 }
 
@@ -143,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     CryptUnlocker();
     WebUnlocker();
     StegoUnlocker();
+    pointtracker();
 
     const resetButton = document.querySelector("#reset-progress");
 
@@ -230,5 +233,24 @@ function StegoUnlocker() {
 
     });
 
+}
+
+function pointtracker(){
+    const foundFlags = getFoundFlags();
+    const foundFlagsAmount = foundFlags.length;
+    // console.log(foundFlagsAmount);
+    const amountOfPoints = foundFlagsAmount*100;
+    const pointerText = document.getElementById("pointCounter");
+
+
+
+    if (pointerText){
+        pointerText.textContent = amountOfPoints;
+        //console.log(amountOfPoints);
+        return amountOfPoints;
+    }
+
+    //console.log(amountOfPoints);
+    return false;
 }
 

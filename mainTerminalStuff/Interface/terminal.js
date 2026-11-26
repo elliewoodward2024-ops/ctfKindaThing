@@ -3,20 +3,11 @@ const MainOutput = document.getElementById("terminal-output");
 const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
 
-import { getPath } from "../fileSystem/paths.js";
-import { listDir, readFile, getThingInfo, createFile, createDir, DeleteFile, DeleteDir } from "../fileSystem/virtual.js";
+import {getPath} from "../fileSystem/paths.js";
+import { listDir, readFile, getThingInfo, createFile, createDir, DeleteFile, DeleteDir, CopyFile } from "../fileSystem/virtual.js";
 import { RootDirectory } from "../fileSystem/directories.js";
 
-console.log(createFile("/home/visitor/heheh.txt", "hello"));
-console.log(DeleteFile("/home/visitor/heheh.txt"));
 
-console.log(createDir("/home/visitor/Program"));
-console.log(DeleteDir("/home/visitor/Program"));
-
-console.log(createDir("/home/visitor/Program"));
-
-console.log(createFile("/home/visitor/Program/heheh.txt", "hello"));
-console.log(DeleteDir("/home/visitor/Program"));
 
 
 
@@ -26,7 +17,7 @@ import {
     getNextCommand
 } from "../workingParts/history.js";
 
-// const possibleCommands = ["ls", "cat", "cp", "file", "head"];
+//const possibleCommands = ["ls", "cat", "cp", "file", "head"];
 
 console.log(terminalContainer);
 
