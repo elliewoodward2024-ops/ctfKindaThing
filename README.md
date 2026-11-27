@@ -14,6 +14,8 @@ https://elliewoodward2024-ops.github.io/CTF_Challenges/
 
 ## Features
 
+- Point System
+- Challenge Unlock System
 - 3 Pages of Challenges
   - Cryptography, 9 Challenges
   - Web Exploration, 7 Challenges
@@ -29,6 +31,12 @@ https://elliewoodward2024-ops.github.io/CTF_Challenges/
    ```
 2. Open the project in your code editor such as VS Code.
 3. Open `index.html` in your browser.
+
+#### Things that helped me learn
+
+- https://www.w3schools.com
+- https://medium.com
+- https://www.freecodecamp.org/learn
 
 #### AI USAGE
 
