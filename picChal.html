@@ -12,16 +12,11 @@
 </head>
 
 <header>
-<div class = "typewriter-container">
-<h1 style="padding-top: 10px;" class="typewriter-text">./STEGO_CHALLENGES</h1>
-</div><br><br>
-<button id="menu-btn" class="menu-btn">&#9776; Open Menu</button>
-
 <br><br>
 <nav id="sidebar" class="sidebar">
 <div class="sidebar-links">
 <a href="javascript:void(0)" class="closebtn" id="close-btn">&times;</a>
-<a href="main.html">cd Home</a>
+<a href="index.html">cd Home</a>
 <a href="crypChal.html"> cd Crypto_Challenges</a>
 <a href="webChal.html"> cd Web_Challenges</a>
 <a href="picChal.html"> cd Stego_Challenges</a>
@@ -32,11 +27,22 @@
 
 
 <body>
+    <div class="topbar">
+        <button id="menu-btn" class="menu-btn">&#9776; Open Menu</button>
+        <div class="pointContainerThing" style="transform: translateY(-10px);">
+            <!--Ok so gonna add each pic in here but don't have them rn since still trying 
+            to do pixel art ok... first time-->
+            <p><img src="/pics/orange.PNG" class="shardImage">Shards Gained: <span id="pointCounter"></span> <button id="thing-button" class="menu-btn"> * </button></p>
+        </div>
+        </div>
+    </div>
+
+    <div class = "typewriter-container">
+        <h1 style="padding-top: 10px;" class="typewriter-text">./STEGO_CHALLENGES</h1>
+    </div>
+
+<br><br><br><br>
 <dev>
-
-
-
-
 <h2>$ cat ./The_Challenges</h2>
 <div class="container">
     <div class="tester" unlocked="1" onclick="toggleOn(this, event)">

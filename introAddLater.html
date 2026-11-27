@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles/style.css">
+<meta name="view-transition" content="same-origin">
+</head>
+
+
+
+
+
+<body >
+    <div class = "typewriter-container">
+<h1 style="padding-top: 10px;">./NETWORK_ACCESS</h1>
+
+<p>
+        [OK] Establishing connection<br>
+        [OK] Encryption protocol initialised<br>
+        [OK] Network response received<br>
+        [!!] User clearance: UNVERIFIED<br>
+        [!!] Restricted directories: LOCKED<br>
+        [!!] Experience: ZERO<br>
+        [!!] Files Found: NONE<br>
+</p>
+
+
+
+<h1 style="padding-top: 10px;">YOU HAVE FOUND THIS NETWORK</h1>
+<p>
+You have found this network. This means you are now tasked with a mission.<br>
+Within this network lies the hidden paths. These paths are only able to be solved by those<br>
+willing to look beyond the obvious, finding the little details.<br>
+Your mission is to recover 5 missing files. These files will be hidden and can be<br>
+recovered through completing the challenges. Once all challenges are compleat and the 5<br>
+missing files recovered there will be a final challenge to get the what is known as NODE_01.<br>
+</p>
+
+<h1>$ cat ./MISSION_BRIEF</h1>
+
+<p>
+    Your objective is simple:<br><br>
+    
+    - Complete challenges and recover flags.<br><br>
+    - Develop your technical skills.<br><br>
+    - Earn experience and increase your clearance.<br><br>
+    - Unlock restricted directories and new environments.<br><br>
+    - Investigate anything that doesn't belong.<br><br>
+
+    Your progress is recorded. Your access is earned.
+</p>
+
+<h1 style="padding-top: 10px;" class="typewriter-text2">$ ./GAIN_ACCESS</h1>
+<p>
+    We are waiting...
+</p><br>
+<a href="main.html" class="welp">ENTER THE NETWORK</a>
+</div>
+</body>
+
+</html>
+<!-- Wondering why this is here and not in a js file like the rest of them... well I don't know either bro  -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".typewriter-container");
+    if (!container) return;
+    
+    const walker = document.createTreeWalker(
+        container,
+        NodeFilter.SHOW_TEXT
+    );
+    const textNodes = [];
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const text = node.textContent.trim();
+        if (text.length > 0) {
+            textNodes.push({
+                node: node,
+                text: text
+            });
+        }
+    }
+    
+    textNodes.forEach(item => {
+        item.node.textContent = "";
+    });
+    
+    const cursor = document.createElement("span");
+    cursor.className = "terminal-cursor";
+    let nodeIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 10;
+    const linePause = 50;
+    function typeNextCharacter() {
+        
+        if (nodeIndex >= textNodes.length) {
+            cursor.remove();
+            return;
+        }
+        const current = textNodes[nodeIndex];
+        const node = current.node;
+        const originalText = current.text;
+        
+        const parent = node.parentElement.closest("h1, p, a");
+        if (parent) {
+            parent.style.visibility = "visible";
+        }
+        
+        cursor.remove();
+        node.parentNode.insertBefore(cursor, node.nextSibling);
+        if (charIndex < originalText.length) {
+            
+            node.textContent += originalText[charIndex];
+            charIndex++;
+            setTimeout(typeNextCharacter, typingSpeed);
+        } else {
+            
+            cursor.remove();
+            nodeIndex++;
+            charIndex = 0
+            setTimeout(typeNextCharacter, linePause);
+        }
+    }
+    typeNextCharacter();
+
+});
+</script>
