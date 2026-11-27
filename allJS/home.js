@@ -1,4 +1,4 @@
-const flagChecker = document.querySelector("#flag")
+
 
 
 const outputThing = document.querySelector("#msg")
@@ -103,18 +103,32 @@ async function handleInput() {
 
 };
 
-flagChecker.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
 
-        handleInput();
-
-    }
-});
 
 function toggleOn2(element, event) {
     event.stopPropagation();
     element.classList.toggle('active');
 }
+
+const popupThing = document.getElementById('myFirstPopupPageThing');
+const open = document.getElementById('myFirstPopupPageThingBTN');
+const close = document.getElementById('reset-progress');
+const keepclose = document.getElementById('keep-progress');
+
+
+open.addEventListener('click', () => {
+    document.getElementById('myFirstPopupPageThing').showModal()
+    });
+
+close.addEventListener('click', () => {
+    popupThing.close();
+    });
+    
+keepclose.addEventListener('click', () => {
+    popupThing.close();
+    });
+
+
 
 
 

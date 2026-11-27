@@ -247,6 +247,27 @@ p {
 
 }
 
+.keep-progress-btn {
+
+    background-color: #000000;
+    font-family: monospace;
+    color: #40ff00;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 2px solid #40ff00;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-size: large;
+    font-size: 13px;
+
+}
+
+.keep-progress-btn:hover {
+    background-color: #1a1d23;
+    cursor: pointer;
+
+}
+
 .hmm {
     color: #000000;
 }
@@ -552,4 +573,20 @@ p {
 .type-line.typing {
     visibility: visible;
 }
+
+
+.dialog {
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgb(255, 0, 0);
+    background-color: #000000;
+    color: #ff0000;
+    font-weight: 600;
+    }
+
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    }
 
