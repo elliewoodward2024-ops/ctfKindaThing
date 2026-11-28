@@ -48,17 +48,13 @@ export function getThingInfo(path){
         return null;
     };
 
-    if (pathToFile.type === "file"){
-        return pathToFile.metadata;
-
-    } else if (pathToFile.type === "directory") {
-        return pathToFile.name;
-    
-    } else {
-        return null;
-        
-    } 
+    return {
+        name: pathToFile.name,
+        type: pathToFile.type,
+        metadata: pathToFile.metadata
+    };
 }
+//Am I coding this while watching youtube stream, yes yes am I. Is that smart, no no its not....oh well
 
 export function createFile(path, content){
 
@@ -194,7 +190,7 @@ export function CopyFile(sourcePath, destinationPath){
         return null;
     }
 
-    if (parentDirectory === null){
+    if (parentDirectory === null){ 
         return null;
     }
 
@@ -202,7 +198,7 @@ export function CopyFile(sourcePath, destinationPath){
         return null;
     }
 
-
+    // its fineeeeeee, its all fine (it is in fact not fine)
     const content = sourceFileStuff.contents;
 
     const FileCopy = {
@@ -223,3 +219,60 @@ export function CopyFile(sourcePath, destinationPath){
     
 
 }
+
+export function MoveFile(sourcePath, destinationPath){
+
+    const pathParts = destinationPath.split("/");
+    const fileName = pathParts.pop();
+    const parentPath = pathParts.join("/") || "/";
+
+    const sourceParts = sourcePath.split("/");
+    const sourceFileName = sourceParts.pop();
+    const sourceParentPath = sourceParts.join("/") || "/";
+
+    const sourceFileStuff = getPath(sourcePath);
+    const sourceParentDirectory = getPath(sourceParentPath);
+    const parentDirectory = getPath(parentPath);
+
+    if (sourceFileStuff === null){
+        return null;
+    }
+    if (sourceFileStuff.type !== "file") {
+        return null;
+    }
+    if (sourceParentDirectory === null){ 
+        return null;
+    }
+    if (sourceParentDirectory.type !== "directory") {
+        return null;
+    }
+    if (parentDirectory === null){
+        return null;
+    }
+    if (parentDirectory.type !== "directory") {
+        return null;
+    }
+    if (!fileName){
+        return null;
+    }
+    if (parentDirectory.children[fileName] !== undefined){
+        return null;
+    }
+    const content = sourceFileStuff.contents;
+
+    const MovedFile = {
+        name: fileName,
+        type: "file",
+        contents: content,
+        metadata: makingMetadataCusWeCoolLikeThat(content)
+    };
+    parentDirectory.children[fileName] = MovedFile;
+    delete sourceParentDirectory.children[sourceFileName];
+
+    return MovedFile;
+
+}
+
+
+//dying - RAHHHHHHHH WHY DID I DO THIS TO MYSELF RAHHHHHHHHH
+

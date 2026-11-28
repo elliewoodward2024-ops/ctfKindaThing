@@ -4,8 +4,11 @@ const terminalContainer = document.getElementById("terminalContainer");
 const prompt = "visitor@TheNetwork:~$";
 
 import {getPath} from "../fileSystem/paths.js";
-import { listDir, readFile, getThingInfo, createFile, createDir, DeleteFile, DeleteDir, CopyFile } from "../fileSystem/virtual.js";
+import { listDir, readFile, getThingInfo, createFile, createDir, DeleteFile, DeleteDir, CopyFile, MoveFile } from "../fileSystem/virtual.js";
 import { RootDirectory } from "../fileSystem/directories.js";
+import { makingMetadataCusWeCoolLikeThat } from "../fileSystem/metadata.js";
+
+console.log(getThingInfo("/home/visitor/README.txt"));
 
 
 
@@ -13,7 +16,7 @@ import { RootDirectory } from "../fileSystem/directories.js";
 
 import {
     addToHistory,
-    getPreviousCommand,
+    getPreviousCommand, 
     getNextCommand
 } from "../workingParts/history.js";
 
